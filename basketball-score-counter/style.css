@@ -74,7 +74,7 @@ select {
 }
 
 .wrapper {
-  border: red solid 2px;
+  border: whitesmoke dashed 2px;
 }
 
 body,
