@@ -60,9 +60,9 @@ select {
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
-   scroll-behavior: auto;
+    scroll-behavior: auto;
   }
-  
+
   *,
   *::before,
   *::after {
@@ -73,6 +73,10 @@ select {
   }
 }
 
+.wrapper {
+  border: red solid 2px;
+}
+
 body,
 button {
   background-color: #1B244A;
@@ -81,24 +85,59 @@ button {
 }
 
 
-.container h3 {
+h3 {
   font-family: Verdana;
   color: #EEEEEE;
   font-weight: 700;
   font-size: 2.5rem;
   line-height: 2.49rem;
-  margin-bottom: 1.3125rem;
-  margin-top: .1rem  ;
+  margin-bottom: 1rem;
+  margin-top: .1rem;
   text-align: center;
-  
+  /* here */
+
+}
+
+.score-history {
+  font-family: Verdana;
+  color: #EEEEEE;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  margin-bottom: 1.3125rem;
+  margin-top: .1rem;
+  text-align: justify;
+  padding-inline: .5rem;
+  max-width: 50ch;
+  height: ;
+}
+
+.counter {
+  display: flex;
+  justify-content: center;
+  color: #04a24e;
+  background-color: #011b09;
+  /* width: fit-content; */
+  text-align: center;
+  font-size: 5.625rem;
+  font-weight: 400;
+  margin-bottom: 1.625rem;
+  border-radius: 5px;
+  padding: 0.25rem 1rem;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  min-width: 8ch;
+  margin-inline: 1rem;
+
 }
 
 .scoreboard {
   color: #F94F6D;
   background-color: #080001;
-  width: 11rem;
   text-align: center;
-  font-size:5.625rem ;
+  font-size: 5.625rem;
   font-weight: 400;
   margin-bottom: 1.625rem;
   border-radius: 5px;
@@ -106,13 +145,15 @@ button {
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
-  
+
+  /* padding-block: .25rem; */
 }
 
 .points {
   color: #9AABD8;
-  
+
 }
+
 .point {
   display: flex;
   width: 2.875rem;
@@ -138,48 +179,56 @@ button {
   font-size: 1.125rem;
   font-weight: 400;
   text-align: center;
+  min-width: 11ch;
   border: 2px solid #9AABD8;
   border-radius: 0.3125rem;
   -webkit-border-radius: 0.3125rem;
   -moz-border-radius: 0.3125rem;
   -ms-border-radius: 0.3125rem;
   -o-border-radius: 0.3125rem;
-  width:fit-content;
+  width: fit-content;
   color: #9AABD8;
   margin-top: 2rem;
   font-size: 1.5rem;
   font-weight: 400;
-  padding:.25rem;
+  padding: .25rem;
 }
 
 .scoreboard,
 .points,
-.new-game {
+.new-game,
+.counter {
   font-family: 'Cursed Timer ULiL', sans-serif;
 }
+
+
 
 .wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  margin-inline: center;
+
 }
 
 .container {
-  position: relative;
-  display:grid;
-  grid-auto-flow: column;
-  gap: 10vw;
-  place-items: center;
-  margin:0 .5rem;
+  border: red solid 2px;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+
 }
 
 .winner-highlight {
-  border:solid 2px gold;
+  border: solid 2px gold;
 }
 
 .points {
-  display:flex;
-  justify-content:space-around ;
+  display: flex;
+  justify-content: space-around;
 }
 
 .scoreboard {
